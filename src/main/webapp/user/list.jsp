@@ -11,6 +11,7 @@
     <h2>
         <a href="/users?action=create">Add New User</a>
         <a href="/users?action=search">Search</a>
+        <a href="/users?action=sortbyid">Sort</a>
     </h2>
 </center>
 <div align="center">

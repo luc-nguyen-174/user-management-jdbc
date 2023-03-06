@@ -78,12 +78,26 @@ public class UserServlet extends HttpServlet {
                 case "search":
                     showSearchForm(request, response);
                     break;
+                case "sortbyid":
+                    sortById(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
+        }
+    }
+
+    private void sortById(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/sortbyid.jsp");
+        List<User> user = userDAO.sortAllUsersByName();
+        request.setAttribute("user", user);
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
         }
     }
 

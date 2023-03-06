@@ -13,14 +13,8 @@
 </center>
 <div align="center">
     <form method="post">
-        <input type="text" name="country" size="45">
-        <input type="submit" value="Search">
-    </form>
-    <c:if test="${user != null}">
-        <table border="1" cellpadding="5">
-            <caption>
-                <h2>Employee Information</h2>
-            </caption>
+        <table border="1" cellspacing="5">
+            <caption><h2>Sort By Name</h2></caption>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -36,7 +30,7 @@
                 </tr>
             </c:forEach>
         </table>
-    </c:if>
+    </form>
 </div>
 </body>
 </html>

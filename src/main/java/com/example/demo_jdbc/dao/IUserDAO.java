@@ -16,4 +16,5 @@ public interface IUserDAO {
     public User selectUser(int id);
 
     public List<User> selectAllUsers();
+    public List<User> sortAllUsersByName();
 }
